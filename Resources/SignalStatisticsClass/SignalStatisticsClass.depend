@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1542342751 source:c:\users\israel\documents\c++ dsp course\signal statistics\signalstatisticsclass\main.cpp
+	<iostream>
+	"SignalStatistics.hpp"
+
+1542343097 c:\users\israel\documents\c++ dsp course\signal statistics\signalstatisticsclass\signalstatistics.hpp
+
+1542343078 source:c:\users\israel\documents\c++ dsp course\signal statistics\signalstatisticsclass\signalstatistics.cpp
+	"SignalStatistics.hpp"
+	<cmath>
+
+1542342719 source:c:\users\israel\documents\c++ dsp course\signal statistics\signalstatisticsclass\waveforms.cpp
+

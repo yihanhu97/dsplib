@@ -7,21 +7,23 @@
 //
 
 #include <iostream>
-#include "dspfunctions.h"
-#include "waveforms.h"
+#include "SignalStatistics.hpp"
+#include "waveforms.hpp"
 #define SIG_LENGTH 320
 
-double signal_mean;
-double signal_variance;
-
 int main() {
-    
-    signal_mean = calc_signal_mean(&InputSignal_f32_1kHz_15kHz[0], SIG_LENGTH);
-    signal_variance = calc_signal_variance(&InputSignal_f32_1kHz_15kHz[0], signal_mean, SIG_LENGTH);
-    
+
+    SignalStatistics *testSignal = new SignalStatistics(&InputSignal_f32_1kHz_15kHz[0], sizeof(InputSignal_f32_1kHz_15kHz)/sizeof(InputSignal_f32_1kHz_15kHz[0]));
+
+    double signal_mean = testSignal->calc_signal_mean();
+    double signal_variance = testSignal->calc_signal_variance();
+    double signal_std = testSignal->calc_signal_std();
+
     std::cout<<"Signal mean = "<<signal_mean<<std::endl;
     std::cout<<"Signal variance = "<<signal_variance<<std::endl;
-    
+    std::cout<<"Signal std = "<<signal_std<<std::endl;
+
+
     return 0;
 }
 

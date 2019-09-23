@@ -1,5 +1,5 @@
 // waveforms.cpp
-#include "waveforms.h"
+#include "waveforms.hpp"
 
 /* ----------------------------------------------------------------------
 ** Test input signal contains 1000Hz + 15000 Hz

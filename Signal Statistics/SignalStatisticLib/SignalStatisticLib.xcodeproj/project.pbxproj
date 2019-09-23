@@ -7,34 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183891362334A04E004657FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183891352334A04E004657FA /* main.cpp */; };
-		1850299823393586009AD113 /* SignalStatistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1850299623393586009AD113 /* SignalStatistics.cpp */; };
-		1877E6A9233023B50048414C /* waveforms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1877E6A8233023B50048414C /* waveforms.cpp */; };
+		185029AA23396760009AD113 /* SignalStatistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029A923396760009AD113 /* SignalStatistics.cpp */; };
+		185029AC2339678B009AD113 /* SignalStatistics.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029AB2339678B009AD113 /* SignalStatistics.hpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1877E69B233016AE0048414C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		183891352334A04E004657FA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1850299623393586009AD113 /* SignalStatistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SignalStatistics.cpp; sourceTree = "<group>"; };
-		1850299723393586009AD113 /* SignalStatistics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
-		1877E69D233016AE0048414C /* signal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = signal; sourceTree = BUILT_PRODUCTS_DIR; };
-		1877E6A7233023B40048414C /* waveforms.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = waveforms.hpp; sourceTree = "<group>"; };
-		1877E6A8233023B50048414C /* waveforms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = waveforms.cpp; sourceTree = "<group>"; };
+		185029A2233965FA009AD113 /* libSignalStatisticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignalStatisticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		185029A923396760009AD113 /* SignalStatistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SignalStatistics.cpp; sourceTree = "<group>"; };
+		185029AB2339678B009AD113 /* SignalStatistics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1877E69A233016AE0048414C /* Frameworks */ = {
+		185029A0233965FA009AD113 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,77 +28,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1838913323349FE4004657FA /* Resources */ = {
+		18502999233965FA009AD113 = {
 			isa = PBXGroup;
 			children = (
-				1877E6A8233023B50048414C /* waveforms.cpp */,
-				1877E6A7233023B40048414C /* waveforms.hpp */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		1850299523393562009AD113 /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				1850299623393586009AD113 /* SignalStatistics.cpp */,
-				1850299723393586009AD113 /* SignalStatistics.hpp */,
-			);
-			path = Functions;
-			sourceTree = "<group>";
-		};
-		1877E694233016AE0048414C = {
-			isa = PBXGroup;
-			children = (
-				1877E69E233016AE0048414C /* Products */,
-				183891352334A04E004657FA /* main.cpp */,
-				1850299523393562009AD113 /* Functions */,
-				1838913323349FE4004657FA /* Resources */,
+				185029A923396760009AD113 /* SignalStatistics.cpp */,
+				185029AB2339678B009AD113 /* SignalStatistics.hpp */,
+				185029A3233965FA009AD113 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1877E69E233016AE0048414C /* Products */ = {
+		185029A3233965FA009AD113 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1877E69D233016AE0048414C /* signal */,
+				185029A2233965FA009AD113 /* libSignalStatisticLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1850299E233965FA009AD113 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1877E69C233016AE0048414C /* signal */ = {
+		185029A1233965FA009AD113 /* SignalStatisticLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "signal" */;
+			buildConfigurationList = 185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "SignalStatisticLib" */;
 			buildPhases = (
-				1877E699233016AE0048414C /* Sources */,
-				1877E69A233016AE0048414C /* Frameworks */,
-				1877E69B233016AE0048414C /* CopyFiles */,
+				1850299E233965FA009AD113 /* Headers */,
+				1850299F233965FA009AD113 /* Sources */,
+				185029A0233965FA009AD113 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = signal;
-			productName = signal;
-			productReference = 1877E69D233016AE0048414C /* signal */;
-			productType = "com.apple.product-type.tool";
+			name = SignalStatisticLib;
+			productName = SignalStatisticLib;
+			productReference = 185029A2233965FA009AD113 /* libSignalStatisticLib.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1877E695233016AE0048414C /* Project object */ = {
+		1850299A233965FA009AD113 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Yihan Hu";
 				TargetAttributes = {
-					1877E69C233016AE0048414C = {
-						CreatedOnToolsVersion = 10.3;
+					185029A1233965FA009AD113 = {
+						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 1877E698233016AE0048414C /* Build configuration list for PBXProject "signal" */;
+			buildConfigurationList = 1850299D233965FA009AD113 /* Build configuration list for PBXProject "SignalStatisticLib" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,31 +100,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 1877E694233016AE0048414C;
-			productRefGroup = 1877E69E233016AE0048414C /* Products */;
+			mainGroup = 18502999233965FA009AD113;
+			productRefGroup = 185029A3233965FA009AD113 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1877E69C233016AE0048414C /* signal */,
+				185029A1233965FA009AD113 /* SignalStatisticLib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1877E699233016AE0048414C /* Sources */ = {
+		1850299F233965FA009AD113 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183891362334A04E004657FA /* main.cpp in Sources */,
-				1850299823393586009AD113 /* SignalStatistics.cpp in Sources */,
-				1877E6A9233023B50048414C /* waveforms.cpp in Sources */,
+				185029AC2339678B009AD113 /* SignalStatistics.hpp in Sources */,
+				185029AA23396760009AD113 /* SignalStatistics.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1877E6A2233016AE0048414C /* Debug */ = {
+		185029A4233965FA009AD113 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,7 +155,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -205,7 +181,7 @@
 			};
 			name = Debug;
 		};
-		1877E6A3233016AE0048414C /* Release */ = {
+		185029A5233965FA009AD113 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,7 +213,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -257,54 +232,48 @@
 			};
 			name = Release;
 		};
-		1877E6A5233016AE0048414C /* Debug */ = {
+		185029A7233965FA009AD113 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Resources",
-				);
+				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		1877E6A6233016AE0048414C /* Release */ = {
+		185029A8233965FA009AD113 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Resources",
-				);
+				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1877E698233016AE0048414C /* Build configuration list for PBXProject "signal" */ = {
+		1850299D233965FA009AD113 /* Build configuration list for PBXProject "SignalStatisticLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1877E6A2233016AE0048414C /* Debug */,
-				1877E6A3233016AE0048414C /* Release */,
+				185029A4233965FA009AD113 /* Debug */,
+				185029A5233965FA009AD113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "signal" */ = {
+		185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "SignalStatisticLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1877E6A5233016AE0048414C /* Debug */,
-				1877E6A6233016AE0048414C /* Release */,
+				185029A7233965FA009AD113 /* Debug */,
+				185029A8233965FA009AD113 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1877E695233016AE0048414C /* Project object */;
+	rootObject = 1850299A233965FA009AD113 /* Project object */;
 }

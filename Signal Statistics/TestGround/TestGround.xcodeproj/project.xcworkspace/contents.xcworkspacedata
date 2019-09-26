@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:signal.xcodeproj">
+      location = "self:/Users/hyh/Dev/dsplib/Signal Statistics/signal/TestGround.xcodeproj">
    </FileRef>
 </Workspace>

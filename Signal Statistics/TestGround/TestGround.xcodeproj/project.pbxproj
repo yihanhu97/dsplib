@@ -28,7 +28,7 @@
 		183891352334A04E004657FA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1850299623393586009AD113 /* SignalStatistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SignalStatistics.cpp; sourceTree = "<group>"; };
 		1850299723393586009AD113 /* SignalStatistics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
-		1877E69D233016AE0048414C /* signal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = signal; sourceTree = BUILT_PRODUCTS_DIR; };
+		1877E69D233016AE0048414C /* TestGround */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestGround; sourceTree = BUILT_PRODUCTS_DIR; };
 		1877E6A7233023B40048414C /* waveforms.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = waveforms.hpp; sourceTree = "<group>"; };
 		1877E6A8233023B50048414C /* waveforms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = waveforms.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +75,7 @@
 		1877E69E233016AE0048414C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1877E69D233016AE0048414C /* signal */,
+				1877E69D233016AE0048414C /* TestGround */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,9 +83,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1877E69C233016AE0048414C /* signal */ = {
+		1877E69C233016AE0048414C /* TestGround */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "signal" */;
+			buildConfigurationList = 1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "TestGround" */;
 			buildPhases = (
 				1877E699233016AE0048414C /* Sources */,
 				1877E69A233016AE0048414C /* Frameworks */,
@@ -95,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = signal;
+			name = TestGround;
 			productName = signal;
-			productReference = 1877E69D233016AE0048414C /* signal */;
+			productReference = 1877E69D233016AE0048414C /* TestGround */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1877E698233016AE0048414C /* Build configuration list for PBXProject "signal" */;
+			buildConfigurationList = 1877E698233016AE0048414C /* Build configuration list for PBXProject "TestGround" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1877E69C233016AE0048414C /* signal */,
+				1877E69C233016AE0048414C /* TestGround */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +286,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1877E698233016AE0048414C /* Build configuration list for PBXProject "signal" */ = {
+		1877E698233016AE0048414C /* Build configuration list for PBXProject "TestGround" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1877E6A2233016AE0048414C /* Debug */,
@@ -295,7 +295,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "signal" */ = {
+		1877E6A4233016AE0048414C /* Build configuration list for PBXNativeTarget "TestGround" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1877E6A5233016AE0048414C /* Debug */,

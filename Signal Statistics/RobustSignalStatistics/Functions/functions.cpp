@@ -110,7 +110,94 @@ void sig_variance(double *sig_src_arr, uint32_t blockSize, double *result) {
         blkCnt--;
     }
     
-    *result = fsum/double(blockSize - 1.0);
+    *result = fsum/(double(blockSize) - 1.0);
     
 }
 
+void sig_std(double *sig_src_arr, uint32_t blockSize, double *result) {
+    
+    double sum = 0.0;
+    double sumOfSquares = 0.0;
+    double in;
+    
+    uint32_t blkCnt;
+    double meanOfSquares, mean, squareOfMean;
+    
+    if (blockSize <= 1) {
+        *result = 0;
+        return;
+    }
+    
+    blkCnt = blockSize>>2U;
+    
+    while(blkCnt > 0) { 
+        in = *sig_src_arr++;
+        sum += in;
+        sumOfSquares += in * in;
+        in = *sig_src_arr++;
+        sum += in;
+        sumOfSquares += in * in;
+        in = *sig_src_arr++;
+        sum += in;
+        sumOfSquares += in * in;
+        in = *sig_src_arr++;
+        sum += in;
+        sumOfSquares += in * in;
+        
+        blkCnt--;
+    }
+    
+    blkCnt = blockSize % 0x4;
+    
+    while(blkCnt > 0) {
+        in = *sig_src_arr++;
+        sum += in;
+        sumOfSquares += in * in;
+        
+        blkCnt--;
+    }
+    
+    
+    /*
+     To calculate variance and standard deviation https://www.sciencebuddies.org/science-fair-projects/science-fair/variance-and-standard-deviation
+    */
+    
+    meanOfSquares = sumOfSquares/(double(blockSize)-1.0);
+    mean = sum/double(blockSize);
+    squareOfMean = (mean*mean)*double(blockSize)/(double(blockSize)-1.0);
+    
+    *result = sqrt(meanOfSquares - squareOfMean);
+    
+}
+
+void sig_rms(double *sig_src_arr, uint32_t blockSize, double *result) {
+    double sum = 0.0;
+    uint32_t blkCnt;
+    double in;
+    
+    blkCnt = blockSize>>2U;
+    
+    while(blkCnt > 0) {
+        in = *sig_src_arr++;
+        sum += in*in;
+        in = *sig_src_arr++;
+        sum += in*in;
+        in = *sig_src_arr++;
+        sum += in*in;
+        in = *sig_src_arr++;
+        sum += in*in;
+        
+        blkCnt--;
+    }
+    
+    blkCnt = blockSize % 0x4;
+    
+    while(blkCnt > 0) {
+        in = *sig_src_arr++;
+        sum += in*in;
+    
+        blkCnt--;
+    }
+    
+    *result = sqrt(sum/(double)blockSize);
+}

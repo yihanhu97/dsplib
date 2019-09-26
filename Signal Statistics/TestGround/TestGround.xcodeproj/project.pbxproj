@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		183891362334A04E004657FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183891352334A04E004657FA /* main.cpp */; };
-		1850299823393586009AD113 /* SignalStatistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1850299623393586009AD113 /* SignalStatistics.cpp */; };
 		1877E6A9233023B50048414C /* waveforms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1877E6A8233023B50048414C /* waveforms.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,11 +25,10 @@
 
 /* Begin PBXFileReference section */
 		183891352334A04E004657FA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1850299623393586009AD113 /* SignalStatistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SignalStatistics.cpp; sourceTree = "<group>"; };
-		1850299723393586009AD113 /* SignalStatistics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
 		1877E69D233016AE0048414C /* TestGround */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestGround; sourceTree = BUILT_PRODUCTS_DIR; };
 		1877E6A7233023B40048414C /* waveforms.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = waveforms.hpp; sourceTree = "<group>"; };
 		1877E6A8233023B50048414C /* waveforms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = waveforms.cpp; sourceTree = "<group>"; };
+		18F51CCA233D7B5F0055F9F6 /* SignalStatistics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +54,7 @@
 		1850299523393562009AD113 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				1850299623393586009AD113 /* SignalStatistics.cpp */,
-				1850299723393586009AD113 /* SignalStatistics.hpp */,
+				18F51CCA233D7B5F0055F9F6 /* SignalStatistics.hpp */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -138,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				183891362334A04E004657FA /* main.cpp in Sources */,
-				1850299823393586009AD113 /* SignalStatistics.cpp in Sources */,
 				1877E6A9233023B50048414C /* waveforms.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +261,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Resources",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -278,6 +275,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Resources",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

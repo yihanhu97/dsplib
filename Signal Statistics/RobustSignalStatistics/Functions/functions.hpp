@@ -11,8 +11,11 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <cmath>
 
 void sig_mean(double *sig_src_arr, uint32_t blockSize, double *result);
 void sig_variance(double *sig_src_arr, uint32_t blockSize, double *result);
+void sig_std(double *sig_src_arr, uint32_t blockSize, double *result);
+void sig_rms(double *sig_src_arr, uint32_t blockSize, double *result);
 
 #endif /* functions_hpp */

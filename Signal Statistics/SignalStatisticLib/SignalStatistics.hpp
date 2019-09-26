@@ -10,23 +10,28 @@
 #define SIGNALSTATISTICS_H
 
 #include <stdio.h>
+#include <cmath>
+#include <stdint.h>
 
 class SignalStatistics {
 private:
     double *sig_src_arr;
-    int sig_length;
+    uint32_t blockSize;
 public:
     // Class constructor
-    SignalStatistics(double* _sig_src_arr, int _sig_length);
+    SignalStatistics(double* _sig_src_arr, uint32_t _blockSize);
     
     // Calculate signal mean
-    double calc_signal_mean();
+    double mean();
 
     // Calculate signal variance
-    double calc_signal_variance();
+    double var();
 
     // Calculate signal standard deviation
-    double calc_signal_std();
+    double std();
+    
+    // Calculate signal standard root mean square
+    double rms();
 };
 
 #endif /* SIGNALSTATISTICS_H */

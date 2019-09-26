@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/hyh/Dev/dsplib/Signal Statistics/signal/TestGround.xcodeproj">
+      location = "group:../SignalStatistics.hpp">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

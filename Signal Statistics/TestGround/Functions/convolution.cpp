@@ -15,6 +15,7 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
     double *out = dst;   // Output pointer
     double *x;           // Intermediate input A pointer
     double *y;           // Intermediate input B pointer
+    
     double *src1, *src2; // Intermediate pointers
     double sum, acc0, acc1, acc2, acc3; // Accumulators
     double x0, x1, x2, x3, c0;
@@ -42,21 +43,20 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
     y = in2;
     
     /* The main idea
-       input array x = [x0, x1, x2, ..., x(srcALen-1)]
-       input array y = [y0, y1, y2, ..., y(srcBLen-1)]
+       input array x = [x0, x1, x2, ..., xn]
+       input array y = [y0, y1, y2, ..., ym]
        Flip y across the origin and implement multiply and sum.
-                              x0 x1 x2 ... x(srcALen-1)
-       y(srcBLen-1) ... y2 y1 y0
+                    x0 x1 x2 ... xn
+       ym ... y2 y1 y0
      */
     
     /* Stage 1
        out[0] = x[0] * y[0]
        out[1] = x[0] * y[1] + x[1] * y[0]
        ....
-       two arrays are now in the position of the following:
-                              x0 x1 x2 ... x(srcALen-1)
-       y(srcBLen-1) y(srcBLen-2) ... y2 y1 y0
-       out[0], out[1], ... , out[srcBLen-1] are now calculated
+       out[srcBLen-2] = x[0] * y[srcBLen - 1] + x[1] * y[srcBlen - 2] +...+ x[srcBLen - 1] * y[0]two arrays are now in the position of the following:
+       x0 x1 x2 ... xn
+       ym ... y2 y1 y0
     */
     while(blockSize1 > 0) {
         sum = 0.0;
@@ -78,6 +78,7 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
             sum += *x++ * *y--;
             k--;
         }
+        std::cout<<sum<<std::endl;
         *out++ = sum;
         y = in2 + count;
         x = in1;
@@ -86,10 +87,13 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
         blockSize1--;
     }
     
+    std::cout<<"What happened"<<std::endl;
+    
     // Stage 2
     x = in1;
     src2 = in2 + (srcBLen - 1);
     y = src2;
+    
     count = 0;
     
     if(srcBLen >= 4) {
@@ -162,7 +166,7 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
             y = src2;
             blkCnt--;
         }
-        
+    
         blkCnt = blockSize2 % 0x4;
         while(blkCnt > 0) {
             sum = 0.0;
@@ -179,6 +183,7 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
                 sum += *x++ * *y--;
                 k--;
             }
+            std::cout<<sum<<std::endl;
             *out = sum;
             count++;
             x = in1 + count;
@@ -203,14 +208,12 @@ void conv(double *srcA, uint32_t srcALen, double *srcB, uint32_t srcBLen, double
                 sum += *x++ * *y--;
                 k--;
             }
+            std::cout<<sum<<std::endl;
             *out = sum;
             count++;
             x = in1 + count;
             y = src2;
             blkCnt--;
-        }
+        }        
     }
-    
-    // Stage 3
-    
 }

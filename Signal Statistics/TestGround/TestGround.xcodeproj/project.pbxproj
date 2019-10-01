@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		183891362334A04E004657FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183891352334A04E004657FA /* main.cpp */; };
-		1852BBE823415D1D0041B733 /* Convolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1852BBE623415D1D0041B733 /* Convolution.cpp */; };
+		1852BBE823415D1D0041B733 /* convolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1852BBE623415D1D0041B733 /* convolution.cpp */; };
 		1877E6A9233023B50048414C /* signals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1877E6A8233023B50048414C /* signals.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		183891352334A04E004657FA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1852BBE623415D1D0041B733 /* Convolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Convolution.cpp; sourceTree = "<group>"; };
-		1852BBE723415D1D0041B733 /* Convolution.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convolution.hpp; sourceTree = "<group>"; };
+		1852BBE623415D1D0041B733 /* convolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = convolution.cpp; sourceTree = "<group>"; };
+		1852BBE723415D1D0041B733 /* convolution.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = convolution.hpp; sourceTree = "<group>"; };
 		1877E69D233016AE0048414C /* TestGround */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestGround; sourceTree = BUILT_PRODUCTS_DIR; };
 		1877E6A7233023B40048414C /* signals.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = signals.hpp; sourceTree = "<group>"; };
 		1877E6A8233023B50048414C /* signals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = signals.cpp; sourceTree = "<group>"; };
@@ -58,8 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				18F51CCA233D7B5F0055F9F6 /* SignalStatistics.hpp */,
-				1852BBE623415D1D0041B733 /* Convolution.cpp */,
-				1852BBE723415D1D0041B733 /* Convolution.hpp */,
+				1852BBE623415D1D0041B733 /* convolution.cpp */,
+				1852BBE723415D1D0041B733 /* convolution.hpp */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183891362334A04E004657FA /* main.cpp in Sources */,
-				1852BBE823415D1D0041B733 /* Convolution.cpp in Sources */,
+				1852BBE823415D1D0041B733 /* convolution.cpp in Sources */,
 				1877E6A9233023B50048414C /* signals.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

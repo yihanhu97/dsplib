@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185029AA23396760009AD113 /* SignalStatistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029A923396760009AD113 /* SignalStatistics.cpp */; };
-		185029AC2339678B009AD113 /* SignalStatistics.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029AB2339678B009AD113 /* SignalStatistics.hpp */; };
+		185029AA23396760009AD113 /* signalstatistic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029A923396760009AD113 /* signalstatistic.cpp */; };
+		185029AC2339678B009AD113 /* signalstatistic.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 185029AB2339678B009AD113 /* signalstatistic.hpp */; };
+		1852BBEB2342A0340041B733 /* convolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1852BBE92342A0340041B733 /* convolution.cpp */; };
+		1852BBEC2342A0340041B733 /* convolution.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1852BBEA2342A0340041B733 /* convolution.hpp */; };
+		1852BBEF2342A4920041B733 /* importlibs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1852BBED2342A4920041B733 /* importlibs.cpp */; };
+		1852BBF02342A4920041B733 /* importlibs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1852BBEE2342A4920041B733 /* importlibs.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185029A2233965FA009AD113 /* libSignalStatisticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSignalStatisticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		185029A923396760009AD113 /* SignalStatistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SignalStatistics.cpp; sourceTree = "<group>"; };
-		185029AB2339678B009AD113 /* SignalStatistics.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SignalStatistics.hpp; sourceTree = "<group>"; };
+		185029A2233965FA009AD113 /* libdsplib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdsplib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		185029A923396760009AD113 /* signalstatistic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = signalstatistic.cpp; sourceTree = "<group>"; };
+		185029AB2339678B009AD113 /* signalstatistic.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = signalstatistic.hpp; sourceTree = "<group>"; };
+		1852BBE92342A0340041B733 /* convolution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = convolution.cpp; sourceTree = "<group>"; };
+		1852BBEA2342A0340041B733 /* convolution.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = convolution.hpp; sourceTree = "<group>"; };
+		1852BBED2342A4920041B733 /* importlibs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = importlibs.cpp; sourceTree = "<group>"; };
+		1852BBEE2342A4920041B733 /* importlibs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = importlibs.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,8 +39,12 @@
 		18502999233965FA009AD113 = {
 			isa = PBXGroup;
 			children = (
-				185029A923396760009AD113 /* SignalStatistics.cpp */,
-				185029AB2339678B009AD113 /* SignalStatistics.hpp */,
+				185029A923396760009AD113 /* signalstatistic.cpp */,
+				185029AB2339678B009AD113 /* signalstatistic.hpp */,
+				1852BBE92342A0340041B733 /* convolution.cpp */,
+				1852BBEA2342A0340041B733 /* convolution.hpp */,
+				1852BBED2342A4920041B733 /* importlibs.cpp */,
+				1852BBEE2342A4920041B733 /* importlibs.hpp */,
 				185029A3233965FA009AD113 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +52,7 @@
 		185029A3233965FA009AD113 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185029A2233965FA009AD113 /* libSignalStatisticLib.a */,
+				185029A2233965FA009AD113 /* libdsplib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,15 +64,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1852BBEC2342A0340041B733 /* convolution.hpp in Headers */,
+				1852BBF02342A4920041B733 /* importlibs.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		185029A1233965FA009AD113 /* SignalStatisticLib */ = {
+		185029A1233965FA009AD113 /* dsplib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "SignalStatisticLib" */;
+			buildConfigurationList = 185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "dsplib" */;
 			buildPhases = (
 				1850299E233965FA009AD113 /* Headers */,
 				1850299F233965FA009AD113 /* Sources */,
@@ -70,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = SignalStatisticLib;
+			name = dsplib;
 			productName = SignalStatisticLib;
-			productReference = 185029A2233965FA009AD113 /* libSignalStatisticLib.a */;
+			productReference = 185029A2233965FA009AD113 /* libdsplib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -92,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1850299D233965FA009AD113 /* Build configuration list for PBXProject "SignalStatisticLib" */;
+			buildConfigurationList = 1850299D233965FA009AD113 /* Build configuration list for PBXProject "dsplib" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185029A1233965FA009AD113 /* SignalStatisticLib */,
+				185029A1233965FA009AD113 /* dsplib */,
 			);
 		};
 /* End PBXProject section */
@@ -115,8 +129,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185029AC2339678B009AD113 /* SignalStatistics.hpp in Sources */,
-				185029AA23396760009AD113 /* SignalStatistics.cpp in Sources */,
+				1852BBEF2342A4920041B733 /* importlibs.cpp in Sources */,
+				185029AC2339678B009AD113 /* signalstatistic.hpp in Sources */,
+				1852BBEB2342A0340041B733 /* convolution.cpp in Sources */,
+				185029AA23396760009AD113 /* signalstatistic.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +271,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1850299D233965FA009AD113 /* Build configuration list for PBXProject "SignalStatisticLib" */ = {
+		1850299D233965FA009AD113 /* Build configuration list for PBXProject "dsplib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185029A4233965FA009AD113 /* Debug */,
@@ -264,7 +280,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "SignalStatisticLib" */ = {
+		185029A6233965FA009AD113 /* Build configuration list for PBXNativeTarget "dsplib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185029A7233965FA009AD113 /* Debug */,

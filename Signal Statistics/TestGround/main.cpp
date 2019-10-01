@@ -8,9 +8,12 @@
 
 #include <iostream>
 #include "SignalStatistics.hpp"
-#include "waveforms.hpp"
+#include "signals.hpp"
 #include <time.h>
 #define SIG_LENGTH 320
+#define IMP_RSP_LENGTH 29
+
+using namespace std;
 
 int main() {
 

@@ -1,25 +1,23 @@
 //
-//  SignalStatistic.cpp
-//  SignalStatisticLib
+//  signalstatistic.cpp
+//  dsplib
 //
 //  Created by Yihan Hu on 9/23/19.
 //  Copyright © 2019 Yihan Hu. All rights reserved.
 //
 
-#ifndef SIGNALSTATISTICS_H
-#define SIGNALSTATISTICS_H
+#ifndef signalstatistic_hpp
+#define signalstatistic_hpp
 
-#include <stdio.h>
-#include <cmath>
-#include <stdint.h>
+#include "importlibs.hpp"
 
-class SignalStatistics {
+class signalstatistic {
 private:
     double *sig_src_arr;
     uint32_t blockSize;
 public:
     // Class constructor
-    SignalStatistics(double* _sig_src_arr, uint32_t _blockSize);
+    signalstatistic(double* _sig_src_arr, uint32_t _blockSize);
     
     // Calculate signal mean
     double mean();
@@ -34,4 +32,4 @@ public:
     double rms();
 };
 
-#endif /* SIGNALSTATISTICS_H */
+#endif /* signalstatistic_hpp */

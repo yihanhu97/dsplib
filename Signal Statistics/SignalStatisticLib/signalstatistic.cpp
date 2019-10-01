@@ -1,21 +1,21 @@
 //
-//  SignalStatistics.cpp
-//  SignalStatisticLib
+//  signalstatistic.cpp
+//  dsplib
 //
 //  Created by Yihan Hu on 9/23/19.
 //  Copyright © 2019 Yihan Hu. All rights reserved.
 //
 
-#include "SignalStatistics.hpp"
+#include "signalstatistic.hpp"
 
 // Pass values to private variables in the class
-SignalStatistics::SignalStatistics(double* _sig_src_arr, uint32_t _blockSize) {
+signalstatistic::signalstatistic(double* _sig_src_arr, uint32_t _blockSize) {
     sig_src_arr = _sig_src_arr;
     blockSize = _blockSize;
 }
 
 // Calculate signal mean
-double SignalStatistics::mean() {
+double signalstatistic::mean() {
     double _mean = 0.0;
     
     double *input = sig_src_arr;
@@ -52,7 +52,7 @@ double SignalStatistics::mean() {
 }
 
 // Calculate signal variance
-double SignalStatistics::var() {
+double signalstatistic::var() {
     double _variance = 0.0;
     
     // Calculate signal mean first
@@ -101,14 +101,14 @@ double SignalStatistics::var() {
 }
 
 // Calculate signal standard deviation
-double SignalStatistics::std() {
+double signalstatistic::std() {
     double _variance = var();
     double _std = sqrt(_variance);
     return _std;
 }
 
 // Calculate signal root mean square
-double SignalStatistics::rms() {
+double signalstatistic::rms() {
     double _rms = 0.0;
     
     double *input = sig_src_arr;

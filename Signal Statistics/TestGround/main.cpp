@@ -13,7 +13,7 @@
 #define SIG_LENGTH 320
 #define IMP_RSP_LENGTH 29
 
-double output;
+double output[11];
 
 int main() {
 
@@ -26,10 +26,13 @@ int main() {
 //    std::cout<<"Signal rms      = "<<testSignal->rms()<<std::endl;
 //    std::cout<<"Execution time  = "<<((double)(clock()-tStart))/CLOCKS_PER_SEC<<std::endl;
     
-    uint32_t x = 3;
-    uint32_t y = x>>2U;
-    conv(test_input, 4, test_response, 3, &output);
-    
+//    uint32_t x = 3;
+//    uint32_t y = x>>2U;
+    conv(test_input, 7, test_response, 5, output);
+    for(int i=0; i<(sizeof(output)/sizeof(output[0]));i++) {
+        std::cout<<output[i]<<std::endl;
+    }
+
     return 0;
 }
 

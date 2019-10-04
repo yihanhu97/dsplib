@@ -56,10 +56,10 @@ double InputSignal_f32_1kHz_15kHz[320] =
 +0.0000000000f, -0.5924659585f, +0.0947343455f, -0.1913417162f, -1.0000000000f, -0.4174197128f, -0.3535533906f, -1.2552931065f,
 };
 
-double test_response[3] = {
-    5.00f, 6.00f, 7.00f
+double test_response[5] = {
+    5.00f, 6.00f, 7.00f, 8.00f, 9.00f
 };
 
-double test_input[4] = {
-    1.00f, 2.00f, 3.00f, 4.00f
+double test_input[7] = {
+    1.00f, 2.00f, 3.00f, 4.00f, 5.00f, 6.00f, 7.00f
 };
